@@ -1,0 +1,354 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+header {
+  padding: 10px 20px; 
+  background: #019180;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;         
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 80px;        
+  max-height: 100%;    
+}
+
+
+nav {
+  position: absolute;          
+  left: 50%;                   
+  transform: translateX(-50%);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+  color: #00685d;
+}
+
+
+.login a {
+  text-decoration: none;
+  background: #007267;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.login a:hover {
+  background: #00796b;
+}
+
+/* Barra inferior*/
+footer {
+  background: #019180;
+  color: white;
+  padding: 40px 20px 20px;
+  margin-top: 60px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  border-bottom: 2px solid white;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 8px 0;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #cceee9;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+  nav { position: static; transform: none; width: 100%; }
+  nav ul { flex-direction: column; padding: 12px; gap: 8px; }
+  nav ul li a { display: block; padding: 10px 16px; border-radius: 6px; }
+}
+/* Contenedor del detalle del producto */
+
+/* Shared button styles used across pages */
+.btn-login {
+  display: inline-block;
+  background: linear-gradient(180deg, #D4AF37 0%, #b89628 100%);
+  color: #000;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  box-shadow: 0 6px 18px rgba(212,175,55,0.18);
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+}
+.btn-login:hover { transform: translateY(-2px); filter: brightness(1.03); }
+.btn-login:active { transform: translateY(0); }
+.btn-login:focus { outline: 3px solid rgba(212,175,55,0.18); outline-offset: 2px; box-shadow: 0 8px 24px rgba(212,175,55,0.22); }
+
+.btn-toggle { display:inline-block; background:transparent; color:#D4AF37; border:2px solid #D4AF37; padding:8px 12px; border-radius:8px; font-weight:700; cursor:pointer; transition: background 0.12s ease, color 0.12s ease, transform 0.12s ease; }
+.btn-toggle:hover { background: #D4AF37; color:#000; transform: translateY(-1px); }
+.detalle-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+/* Layout interno del detalle */
+.detalle-producto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Imagen */
+.detalle-imagen img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+/* Información */
+.detalle-info {
+  max-width: 500px;
+  text-align: left;
+}
+
+.detalle-info h2 {
+  font-size: 2rem;
+  color: #019180;
+  margin-bottom: 10px;
+}
+
+.detalle-precio {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #009688;
+  margin-bottom: 10px;
+}
+
+.detalle-descripcion {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Botón */
+.detalle-info button {
+  background: #009688;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.detalle-info button:hover {
+  background: #00796b;
+}
+/* Login y carrito juntos */
+.login-carrito {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* espacio entre login y carrito */
+}
+
+/* Icono del carrito */
+.carrito {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.5rem; /* tamaño del icono */
+  color: white;
+  transition: color 0.2s ease;
+}
+
+.carrito:hover {
+  color: #cceee9;
+}
+
+/* Contador de productos en el carrito */
+.carrito-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+/* Modal carrito */
+.modal-carrito {
+  display: none; /* oculto por defecto */
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  text-align: left;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+#carrito-lista {
+  list-style: none;
+  padding: 0;
+}
+
+#carrito-lista li {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+#carrito-lista li button {
+  background: red;
+  border: none;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#carrito-total {
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: right;
+}
+
+/* Product hover glow: apply to common product-card selectors and the product detail image */
+.product, .product-card, .product-item {
+  border: 2px solid transparent; /* reserve space for border */
+  border-radius: 10px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease, border-color 0.18s ease;
+  will-change: transform, box-shadow, filter;
+}
+
+.detalle-imagen img {
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease, border-color 0.18s ease;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  display: block;
+}
+
+/* Hover and focus states: golden border + subtle glow + slight brighten */
+.product:hover, .product:focus,
+.product-card:hover, .product-card:focus,
+.product-item:hover, .product-item:focus,
+.detalle-imagen img:hover, .detalle-imagen img:focus {
+  border-color: #D4AF37;
+  box-shadow: 0 10px 30px rgba(212,175,55,0.20), 0 0 20px rgba(212,175,55,0.08) inset;
+  filter: brightness(1.06);
+  transform: translateY(-4px);
+}
+
+/* Focus accessibility: clear focus ring for keyboard users while keeping the glow */
+.product:focus, .product-card:focus, .product-item:focus, .detalle-imagen img:focus {
+  outline: 3px solid rgba(212,175,55,0.14);
+  outline-offset: 4px;
+}
+
+/* Touch devices: remove translateY since hover isn't available */
+@media (hover: none) {
+  .product:hover, .product-card:hover, .product-item:hover, .detalle-imagen img:hover {
+    transform: none;
+  }
+}
